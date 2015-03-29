@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css" />
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <main class="container">
+        <form id="q0" style="display: block">
+            <h1>Какой тип мышления у вас?</h1>
+            <input type="radio" name="nextQuestionId" value="q6" /> Чуствительное
+            <br/>
+            <input type="radio" name="nextQuestionId" value="q4" /> Рациональное
+            <br/>
+            <input type="radio" name="nextQuestionId" value="q8" /> Теоретическое
+            <br/>
+            <button type='submit' class="btn btn-primary">Submit</button>
+        </form>
+        <form id="q1" style="display:none">
+            <h1>В затруднительных случаях:</h1>
+            <input type="radio" name="nextQuestionId" value="q9" /> спешите обратиться за помощью к другим
+            <br/>
+            <input type="radio" name="nextQuestionId" value="q9" /> не любите обращаться
+            <br/>
+            <input type="radio" name="nextQuestionId" value="q3" /> I don't know
+            <br/>
+            <button type='submit' class="btn btn-primary">Submit</button>
+        </form>
+        <form id="q2" style="display:none">
+            <h1>Находясь в обществе, вы предпочитаете:</h1>
+            <input type="radio" name="nextQuestionId" value="q1" /> говорить
+            <br/>
+            <input type="radio" name="nextQuestionId" value="q9" /> слушать
+            <br/>
+            <button type='submit' class="btn btn-primary">Submit</button>
+        </form>
+        <form id="q3" style="display:none">
+            <h1>Вы сильно беспокоитесь о возможных неприятностях</h1>
+            <input type="radio" name="nextQuestionId" value="res1" /> часто
+            <br/>
+            <input type="radio" name="nextQuestionId" value="res4" /> редко
+            <br/>
+            <button type='submit' class="btn btn-primary">Submit</button>
+        </form>
+        <form id="q4" style="display:none">
+            <h1>Какую ОС вы предпочитаете?</h1>
+            <input type="radio" name="nextQuestionId" value="q5" /> Mac
+            <br/>
+            <input type="radio" name="nextQuestionId" value="q2" /> Windows
+            <br/>
+            <input type="radio" name="nextQuestionId" value="q5" /> Linux
+            <br/>
+            <button type='submit' class="btn btn-primary">Submit</button>
+        </form>
+        <form id="q5" style="display:none">
+            <h1>Вы можете пропатчить KDE под FreeBSD?</h1>
+            <input type="radio" name="nextQuestionId" value="q2" /> Yes
+            <br/>
+            <input type="radio" name="nextQuestionId" value="q3" /> No
+            <br/>
+            <button type='submit' class="btn btn-primary">Submit</button>
+        </form>
+        <form id="q6" style="display:none">
+            <h1>Какие книги Вы предпочитаете читать</h1>
+            <input type="radio" name="nextQuestionId" value="q7" /> с занимательным сюжетом
+            <br/>
+            <input type="radio" name="nextQuestionId" value="q4" /> с раскрытием переживаний героев
+            <br/>
+            <button type='submit' class="btn btn-primary">Submit</button>
+        </form>
+        <form id="q7" style="display:none">
+            <h1>Город в котором вы живете?</h1>
+            <input type="radio" name="nextQuestionId" value="q2" /> Kiev
+            <br/>
+            <input type="radio" name="nextQuestionId" value="q8" />Not Kiev
+            <br/>
+            <button type='submit' class="btn btn-primary">Submit</button>
+        </form>
+        <form id="q8" style="display:none">
+            <h1>Ваш пол?</h1>
+            <input type="radio" name="nextQuestionId" value="q5" />Men
+            <br/>
+            <input type="radio" name="nextQuestionId" value="q2" />Woman
+            <br/>
+            <button type='submit' class="btn btn-primary">Submit</button>
+        </form>
+        <form id="q9" style="display:none">
+            <h1>Возраст?</h1>
+            <input type="radio" name="nextQuestionId" value="res2" /> 0-18
+            <br/>
+            <input type="radio" name="nextQuestionId" value="res3" /> 18-50
+            <br/>
+            <button type='submit' class="btn btn-primary">Submit</button>
+        </form>
+        <form action="#" style="display:none" id="res1">
+            Заведи кота
+            <br/>
+        </form>
+        <form action="#" style="display:none" id="res2">
+            Вы ответили, поздравляю
+            <br/>
+        </form>
+        <form action="#" style="display:none" id="res3">
+            Programming good
+            <br/>
+        </form>
+        <form action="#" style="display:none" id="res4">
+            Ceep Learning
+            <br/>
+        </form>
+    </main>
+    <script>
+     
+    $('form').on('submit',  function(e) {
+    	e.preventDefault();
+    	var $this = $(this);
+     var num = $this.find("input[name='nextQuestionId']").val(); 
+	            $this.hide();
+	             $("#" + num).show();
+	        });
+    </script>
+</body>
+
+</html>
