@@ -121,7 +121,7 @@
     $('form').on('submit',  function(e) {
     	e.preventDefault();
     	var $this = $(this);
-     var num = $this.find("input[name='nextQuestionId']").val(); 
+     var num = $this.find("input[name='nextQuestionId']:checked").val(); 
 	            $this.hide();
 	             $("#" + num).show();
 	        });
